@@ -6,7 +6,7 @@ require_relative "../lib/act3_download_strategy"
 class TestCli < Formula
   include ACT3Homebrew
 
-  desc "Test CLI"
+  desc "This is a cool CLI!"
   homepage "https://github.com/justenstall"
 
   registry = "ghcr.io/justenstall/homebrew-test-tap/releases"
