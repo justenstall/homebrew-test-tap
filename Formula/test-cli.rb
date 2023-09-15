@@ -13,16 +13,15 @@ class TestCli < Formula
   repo = "test-cli@sha256:86b300b9e15731098b4aa92dde80d8381a4261c5e87f34c148505e3f54157e58"
   url "#{registry}/#{repo}", using: CraneManifestDownloadStrategy
 
+  version "1.50.8"
+  sha256 ACT3Homebrew.sha256_from_manifest_uri(url)
+
   bottle do
     root_url "https://ghcr.io/v2/justenstall/test-tap"
     rebuild 1
     sha256 cellar: :any_skip_relocation, ventura:      "fc3378517203e0fb0a45c4c75bff6c37515797a8bf2dbc7fe16d9c885f0676db"
     sha256 cellar: :any_skip_relocation, x86_64_linux: "8354277405bba4290437c3d61214c80ecf45c028d40b10650d5fa0ea1a9a413d"
   end
-
-  version "1.50.8"
-
-  sha256 ACT3Homebrew.sha256_from_manifest_uri(url)
 
   def install
     bin.install "act3-pt"
