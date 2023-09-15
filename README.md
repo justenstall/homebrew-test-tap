@@ -27,3 +27,9 @@ In the [`publish.yml`/`pr-pull`](./.github/workflows/publish.yml) workflow, add 
 ### Pull Request Labels
 
 Figure out how you would like to automate adding the label `pr-pull` to each PR that has finished running the [`tests.yml`/`test-bot`](./.github/workflows/tests.yml) workflow and is ready to have the formula update deployed. Could require approval, or could automate it for successful `test-bot` workflow completion.
+
+### Authenticating the GitHub Action
+
+Project must allow pushing to default branch, even if it is protected.
+
+GitHub Actions token for the repository must be granted read/write access rather than the default read only.
