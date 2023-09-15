@@ -23,18 +23,18 @@ class TestCli < Formula
 
   def install
     bin.install "act3-pt"
-    generate_completions_from_executable(bin/"act3-pt", "completion")
+    generate_completions_from_executable("#{bin}/act3-pt", "completion")
 
     # Generate manpages
     mkdir "man" do
-      system bin/"act3-pt", "gendocs", "-f", "man", "."
+      system "#{bin}/act3-pt", "gendocs", "-f", "man", "."
       man1.install Dir["*.1"]
       man5.install Dir["*.5"]
     end
 
     # Generate JSON Schema definitions
     mkdir share/"schemas" do
-      system bin/"act3-pt", "genschema", "."
+      system "#{bin}/act3-pt", "genschema", "."
     end
   end
 
