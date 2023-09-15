@@ -34,7 +34,7 @@ class TestCli < Formula
 
     # Generate JSON Schema definitions
     mkdir share/"schemas" do
-      system "act3-pt", "genschema", "."
+      system bin/"act3-pt", "genschema", "."
     end
   end
 
