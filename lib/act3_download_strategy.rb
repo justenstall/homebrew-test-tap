@@ -175,7 +175,7 @@ class CraneBlobDownloadStrategy < AbstractFileDownloadStrategy
 
   def initialize(url, name, version, **meta)
     super
-    @platform = ACT3Homebrew.get_platform
+    @platform = ACT3Homebrew.platform
     @crane_path = get_crane_path(reason: "OCI registry retrieval")
     @dch_dir = docker_credential_helper_dir
   end
