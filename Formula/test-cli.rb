@@ -56,6 +56,6 @@ class TestCli < Formula
   end
 
   test do
-    system "act3-pt", "version"
+    system "#{bin}/act3-pt", "version"
   end
 end
