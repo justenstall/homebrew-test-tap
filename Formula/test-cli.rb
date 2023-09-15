@@ -8,6 +8,10 @@ class TestCli < Formula
 
   desc "Changing the description!"
   homepage "https://github.com/justenstall"
+  registry = "ghcr.io/justenstall/homebrew-test-tap/releases"
+  # DO NOT EDIT OR RENAME: this variable is updated by the ACT3 Pipeline (you're welcome)
+  repo = "test-cli@sha256:86b300b9e15731098b4aa92dde80d8381a4261c5e87f34c148505e3f54157e58"
+  url "#{registry}/#{repo}", using: CraneManifestDownloadStrategy
 
   bottle do
     root_url "https://ghcr.io/v2/justenstall/test-tap"
@@ -16,17 +20,9 @@ class TestCli < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "8354277405bba4290437c3d61214c80ecf45c028d40b10650d5fa0ea1a9a413d"
   end
 
-  registry = "ghcr.io/justenstall/homebrew-test-tap/releases"
-
-  # DO NOT EDIT OR RENAME: this variable is updated by the ACT3 Pipeline (you're welcome)
-  repo = "test-cli@sha256:86b300b9e15731098b4aa92dde80d8381a4261c5e87f34c148505e3f54157e58"
-  manifest_uri = "#{registry}/#{repo}"
-
-  url manifest_uri, using: CraneManifestDownloadStrategy
-
   version "1.50.8"
 
-  sha256 ACT3Homebrew.sha256_from_manifest_uri(manifest_uri)
+  sha256 ACT3Homebrew.sha256_from_manifest_uri(url)
 
   def install
     bin.install "act3-pt"

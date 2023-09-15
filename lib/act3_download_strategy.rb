@@ -246,7 +246,7 @@ class CraneManifestDownloadStrategy < CraneBlobDownloadStrategy
     ohai "Downloading manifest list #{url}"
 
     Dir.mktmpdir do |tmpdir|
-      index_location = "#{tmpdir}/#{name}--v#{version}--index.json"
+      index_location = "#{tmpdir}/#{name}--#{version}--index.json"
       odebug "Downloading index to #{index_location}"
 
       index_file = Pathname.new(index_location)
