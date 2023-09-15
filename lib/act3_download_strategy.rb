@@ -32,10 +32,10 @@ module ACT3Homebrew
   def docker_credential_helper_dir
     # Check for each platform's helper
     linux_credential_path = ensure_executable! "docker-credential-secretservice",
-                                               formula_name: "docker-credential-helper",
+                                               "docker-credential-helper",
                                                reason:       "OCI registry authentication"
     darwin_credential_path = ensure_executable! "docker-credential-osxkeychain",
-                                                formula_name: "docker-credential-helper",
+                                                "docker-credential-helper",
                                                 reason:       "OCI registry authentication"
 
     dch_dir = ""
