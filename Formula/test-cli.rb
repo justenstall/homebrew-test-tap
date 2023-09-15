@@ -6,8 +6,15 @@ require_relative "../lib/act3_download_strategy"
 class TestCli < Formula
   include ACT3Homebrew
 
-  desc "This is a cool CLI!"
+  desc "Changing the description!"
   homepage "https://github.com/justenstall"
+
+  bottle do
+    root_url "https://ghcr.io/v2/justenstall/test-tap"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, ventura:      "fc3378517203e0fb0a45c4c75bff6c37515797a8bf2dbc7fe16d9c885f0676db"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "8354277405bba4290437c3d61214c80ecf45c028d40b10650d5fa0ea1a9a413d"
+  end
 
   registry = "ghcr.io/justenstall/homebrew-test-tap/releases"
 
