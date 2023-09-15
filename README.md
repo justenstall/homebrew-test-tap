@@ -13,3 +13,17 @@ Or `brew tap justenstall/test-tap` and then `brew install <formula>`.
 ## Documentation
 
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+
+## Setup
+
+### Pass changes to public Tap
+
+Private tap should copy the image from private to public tap, and the formula file should be the same in the public tap save for the path to the registry, which should be changed to the public project's registry. This allows the formula to install regularly from the public tap. If the formula can install regularly, then the Homebrew test-bot can install it in runners and package the result up as a bottle, and use that bottle to edit the formula code. Their scripts will be more stable than anything we could write, so this is a maintenance win.
+
+### Actions
+
+In the [`publish.yml`/`pr-pull`](./.github/workflows/publish.yml) workflow, add `--root-url=$ROOT_URL` to the `run` command in "Pull bottles" job.
+
+### Pull Request Labels
+
+Figure out how you would like to automate adding the label `pr-pull` to each PR that has finished running the [`tests.yml`/`test-bot`](./.github/workflows/tests.yml) workflow and is ready to have the formula update deployed. Could require approval, or could automate it for successful `test-bot` workflow completion.
