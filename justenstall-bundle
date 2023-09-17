@@ -1,0 +1,57 @@
+# shellcheck disable=SC2148
+# Record and share terminal sessions
+brew "asciinema"
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
+brew "asdf"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Programmable completion for Bash 4.2+
+brew "bash-completion@2"
+# Remove large files or passwords from Git history like git-filter-branch
+brew "bfg"
+# Сoncurrent, cache-efficient, and Dockerfile-agnostic builder toolkit
+brew "buildkit"
+# Arbitrary precision calculator
+brew "calc"
+# Cross-platform make
+brew "cmake"
+# Container Signing
+brew "cosign"
+# Tool for interacting with remote images and registries
+brew "crane"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Platform keystore credential helper for Docker
+brew "docker-credential-helper"
+# Distributed revision control system
+brew "git"
+# Open-source GitLab command-line tool
+brew "glab"
+# GNU implementation of the famous stream editor
+brew "gnu-sed"
+# GNU version of the tar archiving utility
+brew "gnu-tar"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Task is a task runner/build tool that aims to be simpler and easier to use
+brew "go-task"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Package manager for kubectl plugins
+brew "krew"
+# OCI Registry As Storage
+brew "oras"
+# Tool for managing OCI containers and pods
+brew "podman"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Cross-shell prompt for astronauts
+brew "starship"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
+# A kubectl plugin for Kubernetes OpenID Connect authentication
+brew "int128/kubelogin/kubelogin"
