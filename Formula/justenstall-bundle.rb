@@ -10,7 +10,7 @@ class JustenstallBundle < Formula
   version "0.0.1"
 
   def install
-    system "#{HOMEBREW_PREFIX}/bin/brew", "bundle", "justenstall-bundle"
+    system "#{HOMEBREW_PREFIX}/bin/brew", "bundle", "--file=justenstall-bundle"
   end
 
 #   # Use opt_prefix/share here because "share" includes the version number
