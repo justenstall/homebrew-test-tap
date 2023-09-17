@@ -4,7 +4,9 @@
 class JustenstallBundle < Formula
   desc "This is my Brewfile installer!"
   homepage "https://github.com/justenstall"
-  url "https://github.com/justenstall/homebrew-test-tap.git", using: :git
+  url "https://github.com/justenstall/homebrew-test-tap.git", 
+  	using: :git,
+	branch: "main"
   version "0.0.1"
 
   def install
